@@ -14,6 +14,7 @@ var MarketSchema   = new Schema({
   last_updated:Date
 });
 
+//MarketSchema.index({ station: 1, co: -1 });
 
 MarketSchema.statics.import = function(message){
   let commodities = message.commodities || [];

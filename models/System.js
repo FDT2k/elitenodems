@@ -6,6 +6,7 @@ var SystemSchema   = new Schema({
   x:Number,
   y:Number,
   z:Number,
+  loc:[],
   stationCount: Number,
   stations:[{type:Schema.ObjectId,  ref :'Station'}]
 });
@@ -49,6 +50,7 @@ SystemSchema.statics.import = function(name,pos){
     sys.x = pos[0];
     sys.y = pos[1];
     sys.z = pos[2];
+    sys.loc = pos;
     return sys.save();
   });
 }
