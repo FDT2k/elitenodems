@@ -36,7 +36,7 @@ init = function (){
 
     }else if(ref == "https://eddn.edcd.io/schemas/commodity/3"){
       Market.import(message.message);
-
+    
     }
   });
 }
